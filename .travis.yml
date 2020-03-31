@@ -1,5 +1,7 @@
 language: python
 install:
+  - pip install pytest
+  - pip install pytest-timeout
   - pip install -r requirements.txt
 script: pytest
 jobs:
@@ -14,5 +16,4 @@ jobs:
       before_install:
         - choco install python --version 3.8
         - python -m pip install --upgrade pip
-        - python -m pip install pytest
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
