@@ -15,5 +15,6 @@ setup(
     author_email='tobse.unique@gmail.com',
     url='https://github.com/tobse80/rof-helpers',
     license=license,
-    packages=find_packages(exclude=('tests'))
+    package_dir={"": "src"},
+    packages=find_packages(where='src')
 )
