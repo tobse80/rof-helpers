@@ -1,7 +1,7 @@
-from example import func
+from .context import example
 
 def test_func_pass():
-    assert func(3) == 4
+    assert example.func(3) == 4
 
 def test_func_fail():
-    assert func(3) == 5
+    assert example.func(3) == 5
