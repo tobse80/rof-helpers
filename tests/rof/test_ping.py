@@ -2,6 +2,8 @@ from .context import rof
 import pytest
 import subprocess
 
+# set timeout for all test functions to 1.2 sec
+pytestmark = pytest.mark.timeout(1.2)
 
 def test_is_target_reachable__loopback():
    # should always succeed
@@ -17,13 +19,11 @@ def test_is_target_reachable__private():
    # Antwort von a.b.c.d: Zielnetz nicht erreichbar.
    assert not rof.is_target_reachable("192.168.212.212")
 
-@pytest.mark.timeout(1.2)
 def test_is_target_reachable__notReachable():
    # assumption: specific address is not reachable
    # Zeitüberschreitung der Anforderung.
    assert not rof.is_target_reachable("2.3.4.5")
 
-@pytest.mark.timeout(1.2)
 def test_is_target_reachable__timeoutExpired():
    with pytest.raises(subprocess.TimeoutExpired):
       # assumption: specific address is not reachable
