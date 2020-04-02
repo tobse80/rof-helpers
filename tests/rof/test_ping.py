@@ -28,4 +28,4 @@ def test_is_target_reachable__timeoutExpired():
    with pytest.raises(subprocess.TimeoutExpired):
       # assumption: specific address is not reachable
       # Zeitüberschreitung der Anforderung.
-      rof.is_target_reachable("2.3.4.5", tmoSec=0)
+      rof.is_target_reachable("2.3.4.5", timeout=0)
