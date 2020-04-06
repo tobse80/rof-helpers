@@ -25,6 +25,6 @@ def ping(target:str, timeout:int=1, count:int=1, size:int=64) -> subprocess.Comp
          cmd.extend(('-w', str(timeout * 1000)))
       cmd.append(target)
    else:
-      raise RuntimeError('"' + str(platform) + '" not supported.')
+      raise RuntimeError('"' + str(sys.platform) + '" not supported.')
 
    return subprocess.run(cmd, timeout = timeout + 1, capture_output = True)
