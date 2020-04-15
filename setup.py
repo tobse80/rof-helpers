@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+import setuptools
 
 with open('README.md') as f:
     readme = f.read()
@@ -6,15 +6,22 @@ with open('README.md') as f:
 with open('LICENSE') as f:
     license = f.read()
 
-setup(
+setuptools.setup(
     name='rof-helpers',
     version='0.0.1',
     description='Helper functions for Robot Framework',
     long_description=readme,
+    long_description_content_type="text/markdown",
     author='tobse80',
     author_email='tobse.unique@gmail.com',
     url='https://github.com/tobse80/rof-helpers',
     license=license,
     package_dir={"": "src"},
-    packages=find_packages(where='src')
+    packages=setuptools.find_packages(where='src'),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.7',
 )
