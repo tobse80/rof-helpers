@@ -3,7 +3,7 @@
 
 # rof-helpers
 
-Helper functions supporting tests written for Robot Framework.
+Helper functions supporting tests written for Robot Framework. Supports python 3.7 or newer.
 
 ## Structure
 
@@ -36,5 +36,5 @@ robot --pythonpath src rof-samples
 In the project's top directory, open a command shell and run:
 
 ```sh
-python3 setup.py sdist bdist_wheel
+python setup.py sdist bdist_wheel
 ```
