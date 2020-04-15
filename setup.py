@@ -8,7 +8,7 @@ with open('LICENSE') as f:
 
 setuptools.setup(
     name='rof-helpers',
-    version='0.0.1',
+    version='0.1.0',
     description='Helper functions for Robot Framework',
     long_description=readme,
     long_description_content_type="text/markdown",
